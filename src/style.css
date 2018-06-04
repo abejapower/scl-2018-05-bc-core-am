@@ -1,1 +1,44 @@
-/* Acá va tu código */
+body{
+    background-color: fuchsia;
+}
+h1{
+    color: gray;
+    border: 6px ridge;
+    padding: 3%;
+    margin-left: 36%;
+    font-size: 2em;
+    background-color: rgba(204, 211, 248, 0.863);
+    display: inline-block;
+    position: fixed;
+}
+.left{
+    color: gray;
+    background-color: antiquewhite;
+    border: 6px ridge;
+    position: fixed;
+    font-size: 1.5em;
+    padding: 2% 3% 1% 1%;   
+    margin: 12% 65% 0% 1%;
+    display: inline-block;
+}
+.middle{
+    color: gray;
+    background-color: #6bd4ee;
+    border: 6px ridge;
+    position: fixed;
+    font-size: 1,5em;
+    padding: 2% 5% 5% 1%;
+    margin: 12% 1% 1% 35%;
+    display: inline-block; 
+}
+.right{
+    color: gray;
+    background-color: greenyellow;
+    border: 6px ridge;
+    position: fixed;
+    font-size: 2em;
+    padding: 2% 6% 11.5% 2%;
+    margin: 12% 0% 0% 63%;
+    display: inline-block;
+   
+}
