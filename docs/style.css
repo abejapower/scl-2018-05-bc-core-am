@@ -35,9 +35,10 @@ h1{
     color: gray;
     background-color: greenyellow;
     border: 6px ridge;
+    position: fixed;
     font-size: 2em;
-    padding: 2% 6% 5% 2%;
-    margin: 12% 0% 0% 67%;
+    padding: 2% 6% 11.5% 2%;
+    margin: 12% 0% 0% 63%;
     display: inline-block;
    
 }

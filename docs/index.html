@@ -6,26 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cypher Cesar</title>
-  <link rel = "stylesheet" href = "style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div>
-    <h1 class = "titulo">Cypher Me Cesar</h1>
+    <h1 class="titulo">Cypher Me Cesar</h1>
   </div>
-<section class = "left">
-    <button id = "cypher" type = "submit">
+<section class="left">
+  <div class="botones">
+    <button id="intervalo" type="text">
       cypher
     </button>
-  <input id = "intervals" type = "number">
-     <p>
+  </div>
+  <input type="number" id="offset">
+    </input>
+      <p>
       Qué es esto?, elegir un tamaño de intervalo: sera el numero de espacio que salte las letras, para codificar su mensaje.
     </p>
-  </input> 
   </div>
 </section>
 <!--parte del medio donde va el mensaje y eleccion-->
-<section class = "middle">
-  <input id = "message" type = "text" placeholder = " Introduce aquí mensaje" >
+<section class="middle">
+  <input id="mensaje" type="text" key="msj" placeholder =" Introduce aquí mensaje" >
     </input>
 <!-- aqui van los botonoes de codificar y descodificar-->
 <!--eleccion entre cifrado y descifrado-->
@@ -35,24 +37,27 @@
      CLICK SI DESEA CODIFICAR
     </strong>               
    </li>
-   <button id="code" type="submit" >
+   <button type="submit" onclick "cifrado (this)"id="cif">
     OK
    </button>
    <li>
     <strong>
-     CLICK SI DESEA DESCODIFICAR
+     CLICK SI DESEA CODIFICAR
     </strong>
    </li>
-   <button id="decode" type="submit" >
+   <button type="submit" onclik "descifrado (this)"id "def">
     OK
    </button>   
   </ul>
 </section>
 
 <!--respuesta-->
-<section class = "right">
-      <p>Tu mensaje</p>
-        <input id = "answer"  type="text" placeholder = "respuesta del mensaje" ></input>  
+<section class="right">
+    <div class="respuesta">
+     Tu mensaje
+    <input type="text" key="offset" placeholder = "respuesta del mensaje" >
+    </input>  
+</div>
 </section>
  
   <div id="root"></div>

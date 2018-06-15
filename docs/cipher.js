@@ -19,7 +19,7 @@ for (let i= 0; i < str.length; i++){
     }else if/*para todo lo demas, chao*/
     (cesar.charCodeAt(0)===32){
       let newmsj = cesar.charCodeAt(0);
-      return += String.fromCodeAt(newmsj);
+      return += String.fromCodde(newmsj);
     }
 
     }
