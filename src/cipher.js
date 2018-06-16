@@ -1,50 +1,45 @@
 window.cipher = {
-  encode :(str,num) => {
-    let repuesta="";
-    /*esta parte recoore intera el mensaje*/
-for (let i= 0; i < str.length; i++){
-  let cesar=str[i];
-  /*posiciones donde se encuetras las mayusculas*/
-  if ((cesar.charCodeAt(0)>=65) && (cesar.charCodeAt(0)<=90)){
-    /*para calcular de 0-25 del ascii aqui le restamos 65*/
-    let newmsj= charCodeAt(0)-65;
-    /* con la ubicacion de la letra del mensaje recien podemos codificar*/
-    out +=String.fromCharCode(((newmsj + intervalo)%26)+65);
-  }else if 
-    ((cesar.charCodeAt(0)>=97) && (cesar.charCodeAt(0)<=122)){
-      /* lo miso pero para minuscula*/
-      let newmsj= cesar.charCodeAt(0)-97;
-      /*con la ubicacion de la letra del mensaje se puede codificar*/
-      out += String.fromCharCode(((newmsj+intervalo)%26)+97);/*suma el offset y 97 seria donde comienza a ubicarse las letra minusculas en javascript*/
-    }else if/*para todo lo demas, chao*/
-    (cesar.charCodeAt(0)===32){
-      let newmsj = cesar.charCodeAt(0);
-      return += String.fromCodeAt(newmsj);
-    }
+  encoder: ((str,num) => {
+    let answer='';
+    // for para interinar cada palabra
+    for (let i = 0; i< str.length; i++);
 
-    }
+    // obtener la ubicacion de las letras
+    let posStr = str.charCodeAt(i);
+
+    // para las palabras en mayuscula
+    if ((posStr >= 65) && (posStr <= 90)){
+    
+    // codificar
+    let codeWrd = (((posStr -65 + intervals)%26)+65);
+    answer += String.fromCharCode(codeWrd);
+    // para las palabras en minuscula
+  }if ((posStr >=97) && (posStr <= 122)){ 
+    let codeWrd = ((posStr- 65 + intervals)%26 +65);
+    answer += String.fromCharCode(codeWrd);
+    // para cuando hay espacios 
+  }if (posStr ===32){
+    answer += '';
   }
+  return answer
+}),
 
-  decode :(str,num) => {
-    let repuesta="";
-    /*esta parte recoore intera el mensaje*/
-for (let i= 0; i < str.length; i++){
-  let cesar=str[i];
-  /*posiciones donde se encuetras las mayusculas en ascii*/
-  if ((cesar.charCodeAt(0)>=65) && (cesar.charCodeAt(0)<=90)){
-    /*para calcular de 0-25 del ascii aqui le restamos 65*/
-    let newmsj= charCodeAt(0)-65;
-    /* con la ubicacion de la letra del mensaje recien podemos descodificar*/
-    out +=String.fromCharCode(((newmsj - num)%26)+65);
-  }else if 
-    ((cesar.charCodeAt(0)>=97) && (cesar.charCodeAt(0)<=122)){
-      /* lo miso pero para minuscula*/
-      let newmsj= cesar.charCodeAt(0)-97;
-      /*con la ubicacion de la letra del mensaje se puede desdificar*/
-      out += String.fromCharCode(((newmsj- num)%26)+97);/*suma el offset y 97 seria donde comienza a ubicarse las letra minusculas en javascript*/
-    }else if/*para todo lo demas, chao*/
-    (cesar.charCodeAt(0)===32){
-      let newmsj = cesar.charCodeAt(0);
-      return += String.fromCodde(newmsj);
-    }
+  decoder : (str,num) => {
+    let answerD='';
+    for (let i = 0; i< str.length; i++);
+    let posStr = str.charCodeAt(i);
+  
+  if((posStr >= 65)&& (posStr<= 90)){
+    let decodeWrd = (((posStr - 90)-intervals)%26 + 90);
+    answerD += Sting.fromCharCode(decodeWrd);
+
+  }if((posStr>97)&&(posStr<=122)){
+    let decodeWrd = (((posStr-122)-intervals)&26 +122);
+     answer +=String.fromCharCode(decodeWrd);
+
+  }if (posStr ===32){
+    answerD +='';
+  }
+return answerD
+  },
 }
