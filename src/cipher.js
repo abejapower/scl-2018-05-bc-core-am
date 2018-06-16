@@ -25,21 +25,21 @@ window.cipher = {
 }),
 
   decoder : (str,num) => {
-    let answerD='';
+    let answer='';
     for (let i = 0; i< str.length; i++);
     let posStr = str.charCodeAt(i);
   
   if((posStr >= 65)&& (posStr<= 90)){
     let decodeWrd = (((posStr - 90)-intervals)%26 + 90);
-    answerD += Sting.fromCharCode(decodeWrd);
+    answer += Sting.fromCharCode(decodeWrd);
 
   }if((posStr>97)&&(posStr<=122)){
     let decodeWrd = (((posStr-122)-intervals)&26 +122);
      answer +=String.fromCharCode(decodeWrd);
 
   }if (posStr ===32){
-    answerD +='';
+    answer +='';
   }
-return answerD
+return answer
   },
 }

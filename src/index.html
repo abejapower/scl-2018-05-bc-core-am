@@ -13,10 +13,8 @@
     <h1 class = "titulo">Cypher Me Cesar</h1>
   </div>
 <section class = "left">
-    <button id = "cypher" type = "submit">
-      cypher
-    </button>
-  <input id = "intervals" type = "number">
+  <button id="offset"> click</button>
+  <input id = "intervals" type = "number" placeholder="Introduce intervalo deseado" cols="30" rows="2">
      <p>
       Qué es esto?, elegir un tamaño de intervalo: sera el numero de espacio que salte las letras, para codificar su mensaje.
     </p>
@@ -25,7 +23,7 @@
 </section>
 <!--parte del medio donde va el mensaje y eleccion-->
 <section class = "middle">
-  <input id = "message" type = "text" placeholder = " Introduce aquí mensaje" >
+  <input id = "message" type = "text" placeholder = " Introduce aquí mensaje"cols="30" rows="2">
     </input>
 <!-- aqui van los botonoes de codificar y descodificar-->
 <!--eleccion entre cifrado y descifrado-->
@@ -52,7 +50,8 @@
 <!--respuesta-->
 <section class = "right">
       <p>Tu mensaje</p>
-        <input id = "answer"  type="readonly" placeholder = "respuesta del mensaje" ></input>  
+      <textarea id ="aws" placeholder="aqui va tu respuesta" readonly cols="30" rows="2"></textarea>
+      
 </section>
  
   <div id="root"></div>
