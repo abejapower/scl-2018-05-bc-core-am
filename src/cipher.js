@@ -16,7 +16,7 @@ encode: (str, numOs) => {
       empty += String.fromCharCode(encrypt);}
     
     if ((position >= 97) && (position <= 122)){
-    let encrypt = (((position-65+parseInt(numOs)) % 26) +65);
+    let encrypt = (((position-97+parseInt(numOs)) % 26) +97);
     empty += String.fromCharCode(encrypt);}
 }
 
@@ -30,11 +30,11 @@ decode:(strT, nuMoS) => {
       word += ' ';
     }
     if ((place>= 65)&&(place <=90)){
-    let decrypt = (((place -65- parseInt(nuMoS)) % 26) +65);
+    let decrypt = (((place -90- parseInt(nuMoS)) % 26) +90);
     word += String.fromCharCode(decrypt);}
 
     if ((place >= 97)&& (place<=122)){
-      let desencrypt = (((place-97-parseInt(nuMoS)) %26)+97);
+      let desencrypt = (((place-122-parseInt(nuMoS)) %26)+122);
       word +=String.fromCharCode(desencrypt);}
     }  
     return word;  
