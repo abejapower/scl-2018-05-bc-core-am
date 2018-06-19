@@ -9,22 +9,31 @@
   <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-  <div>
+  <div class="row">
+    <div class="col-3">
     <h1 class = "titulo">Cypher Me Cesar</h1>
   </div>
-<section class = "left">
-  
-  <input id = "intervals" type = "number" placeholder="Introduce intervalo deseado" cols="30" rows="2">
-     <p>
-      Qué es esto?, elegir un tamaño de intervalo: sera el numero de espacio que salte las letras, para codificar su mensaje.
-    </p>
-  </input> 
   </div>
+<section class = "left">
+  <div class="row">
+    <div class="col-3">
+      <input id = "intervals" type = "number" placeholder="Introduce intervalo deseado">
+        <p>
+         Elige el tamaño del intervalo.
+        </p>
+      </input> 
+    </div>
+  </div>  
 </section>
 <!--parte del medio donde va el mensaje y eleccion-->
 <section class = "middle">
-  <input id = "textCesar" type = "text" placeholder = " Introduce aquí mensaje"cols="30" rows="2">
-    </input>
+  <div class="row">
+    <div class="col-3">
+      <input id = "textCesar" type = "text" placeholder = " Introduce aquí mensaje">
+      </input>
+    </div>
+  </div>
+  
 <!-- aqui van los botonoes de codificar y descodificar-->
 <!--eleccion entre cifrado y descifrado-->
   <ul>
@@ -49,8 +58,13 @@
 
 <!--respuesta-->
 <section class = "right">
-      <p>Tu mensaje</p>
-      <textarea id ="answer" placeholder="aqui va tu respuesta" readonly cols="30" rows="2"></textarea>
+  <div class="row">
+    <div class="col-3">
+        <p>Tu mensaje</p>
+        <textarea id ="answer" placeholder="aqui va tu respuesta" readonly cols="30" rows="2"></textarea>      
+    </div>
+  </div>
+      
       
 </section>
  
