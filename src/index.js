@@ -1,21 +1,15 @@
-//evento click boton de offset y despues se borra
-const botonn = document.getElementById("offset");
-botonn.addEventListener("click",()=>{
-    let intervals = document.getElementById("intervals").value;
-    document.getElementById("intervals").value=" ";
-})
-
 //evento click codificadora y despues se borra 
-const boton = document.getElementById("coder");
-boton.addEventListener("click", ()=> {
-    let message = document.getElementById("message").value;
-    document.getElementById("message").value = " ";
-    document.getElementById("answer").innerHTML ="answer";
+const empty = document.getElementById('coder').addEventListener('click',() =>{
+    let num = document.getElementById('intervals').value;
+    let str = document.getElementById('textCesar').value;
+    let wordCesar= window.cipher.encode(str,num);
+    document.getElementById('answer').innerHTML = wordCesar;
 
 })
-// evento click descodificadora y despues se borra 
-const boton2 = document.getElementById("decoder");
-boton2.addEventListener("click", ()=> {
-    let message = document.getElementById("message").value;
-    document.getElementById("message").value 
+
+const word = document.getElementById('decoder').addEventListener('click',() =>{
+    let nuMoS = document.getElementById('intervals').value;
+    let strT =document.getElementById('textCesar').value;
+    let wordCesar= window.cipher.decode(strT,nuMoS);
+    document.getElementById('answer').innerHTML = wordCesar;
 })

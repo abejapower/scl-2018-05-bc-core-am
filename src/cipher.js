@@ -1,45 +1,42 @@
-window.cipher = {
-  encoder: ((str,num) => {
-    let answer='';
-    // for para interinar cada palabra
-    for (let i = 0; i< str.length; i++);
-
-    // obtener la ubicacion de las letras
-    let posStr = str.charCodeAt(i);
-
-    // para las palabras en mayuscula
-    if ((posStr >= 65) && (posStr <= 90)){
+window.cipher ={
+  //cifrar mensaje usando function arrow
+encode: (str, numOs) => {
+  //variable vacia para interar en un for
+  let empty= '';
+  for (let i=0; i<str.length; i++) {
+    //obtener posicion de las letras 
+    let position = str.charCodeAt(i);
+    //espacio
+    if (position===32){
+      empty += ' '; 
+    }
+    //mayuscula//
+    if((position >= 65) && (position <= 90)){
+      let encrypt = (((position-65 +parseInt(numOs)) %26) +65);
+      empty += String.fromCharCode(encrypt);}
     
-    // codificar
-    let codeWrd = (((posStr -65 + intervals)%26)+65);
-    answer += String.fromCharCode(codeWrd);
-    // para las palabras en minuscula
-  }if ((posStr >=97) && (posStr <= 122)){ 
-    let codeWrd = ((posStr- 65 + intervals)%26 +65);
-    answer += String.fromCharCode(codeWrd);
-    // para cuando hay espacios 
-  }if (posStr ===32){
-    answer += '';
-  }
-  return answer
-}),
+    if ((position >= 97) && (position <= 122)){
+    let encrypt = (((position-65+parseInt(numOs)) % 26) +65);
+    empty += String.fromCharCode(encrypt);}
+}
 
-  decoder : (str,num) => {
-    let answer='';
-    for (let i = 0; i< str.length; i++);
-    let posStr = str.charCodeAt(i);
-  
-  if((posStr >= 65)&& (posStr<= 90)){
-    let decodeWrd = (((posStr - 90)-intervals)%26 + 90);
-    answer += Sting.fromCharCode(decodeWrd);
+return empty;
+},
+decode:(strT, nuMoS) => {
+  let word='';
+  for (let j=0; j<strT.length; j++){
+    let place = strT.charCodeAt(j);
+    if (place===32){
+      word += ' ';
+    }
+    if ((place>= 65)&&(place <=90)){
+    let decrypt = (((place -65- parseInt(nuMoS)) % 26) +65);
+    word += String.fromCharCode(decrypt);}
 
-  }if((posStr>97)&&(posStr<=122)){
-    let decodeWrd = (((posStr-122)-intervals)&26 +122);
-     answer +=String.fromCharCode(decodeWrd);
-
-  }if (posStr ===32){
-    answer +='';
-  }
-return answer
+    if ((place >= 97)&& (place<=122)){
+      let desencrypt = (((place-97-parseInt(nuMoS)) %26)+97);
+      word +=String.fromCharCode(desencrypt);}
+    }  
+    return word;  
   },
 }
